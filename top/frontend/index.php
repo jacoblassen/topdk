@@ -7,12 +7,12 @@
   <body>
     <div id="master">
       <div id="wrapper">
-        <a href="JSON.php">
+        <a href="XML.php">
           <div class="button">
             <h1>XML</h1>
           </div>
         </a>
-        <a href="XML.php">
+        <a href="JSON.php">
           <div class="button">
             <h1>JSON</h1>
           </div>
