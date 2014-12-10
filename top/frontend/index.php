@@ -18,9 +18,6 @@
           </div>
         </a>
       </div>
-      <div>
-        <p>Er jeg stadig i jakobs rep</p>
-      </div>
     </div>
   </body>
 </html>
