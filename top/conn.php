@@ -2,7 +2,7 @@
   $server = "127.0.0.1";
   $user = "root";
   $password = "root";
-  $database = "lam";
+  $database = "toppro";
   $port = "3306";
 
   //Create connection
