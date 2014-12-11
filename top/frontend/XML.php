@@ -34,6 +34,10 @@
           <input type="text" name="accidentDate" id="accidentDate" />
         </div>
         <div>
+          <label for="where">Hvor</label>
+          <textarea name="where" rows="8" cols="40" form="form"></textarea>
+        </div>
+        <div>
           <label for="how">Hvordan</label>
           <textarea name="how" rows="8" cols="40" form="form"></textarea>
         </div>
