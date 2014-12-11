@@ -8,7 +8,7 @@
   <body>
     <div id="master">
       <h1>XML</h1>
-      <form action="#" method="POST">
+      <form action="#" method="POST" id="form">
         <div>
           <label for="name">Navn</label>
           <input type="text" name="name" id="name" />
@@ -35,7 +35,7 @@
         </div>
         <div>
           <label for="how">Hvordan</label>
-          <input type="text" name="how" id="how" />
+          <textarea name="how" rows="8" cols="40" form="form"></textarea>
         </div>
         <div>
           <label for="injured">Antal tilskadekomne</label>
