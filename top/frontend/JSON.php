@@ -8,7 +8,7 @@
   <body>
     <div id="master">
       <h1>JSON</h1>
-      <form action="#" method="POST" id="form">
+      <form action="../receiveReview.php" method="POST" id="form">
         <div>
           <label for="name">Navn</label>
           <input type="text" name="name" id="name" />

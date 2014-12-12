@@ -6,11 +6,11 @@
   $port = "3306";
 
   //Create connection
-  $conn = new mysqli($server, $user, $password, $database, $port);
+  $mysqli = new mysqli($server, $user, $password, $database, $port);
 
   //Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
   }
   echo "Connected successfully";
 ?>
