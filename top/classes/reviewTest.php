@@ -1,5 +1,6 @@
 <?php
   require_once 'review.php';
+  require_once '../util/fetch.php';
 
   $array = [];
 
@@ -22,6 +23,9 @@
     $array
   );
 
-  var_dump($review);
-  $name = $review->name;
+  //var_dump($review);
+  //$name = $review->name;
+
+  FetchData::Fetch();
+
 ?>
