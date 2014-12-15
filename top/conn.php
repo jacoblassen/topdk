@@ -19,4 +19,5 @@
   } else {
     printf("Current character set: %s\n", $mysqli->character_set_name());
   }
+  echo '<br />'
 ?>

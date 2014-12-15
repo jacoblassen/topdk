@@ -1,5 +1,5 @@
 <?php
-  class review {
+  class Review {
 
     var $id;
     var $name;
