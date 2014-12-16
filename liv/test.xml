@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<root>
+  <review>
+    <id>11</id>
+    <name>as</name>
+    <cpr>11</cpr>
+    <email>a@a.com</email>
+    <tlf>11</tlf>
+    <contactTime>11:00</contactTime>
+    <accidentDate>1999-12-12</accidentDate>
+    <location>as</location>
+    <received>11:00</received>
+    <how>as</how>
+    <flowType>XML</flowType>
+    <reviewItems>
+      <itemId>11</itemId>
+      <itemName>as</itemName>
+      <itemValue>6</itemValue>
+      <itemRelation>11</itemRelation>
+    </reviewItems>
+  </review>
+</root>

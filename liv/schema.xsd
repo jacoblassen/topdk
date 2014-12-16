@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="root">
+  <xs:complexType>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="review">
+       <xs:complexType>
+        <xs:sequence maxOccurs="unbounded">
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="cpr" type="xs:string"/>
+        <xs:element name="email" type="xs:string"/>
+        <xs:element name="tlf" type="xs:string"/>
+        <xs:element name="contactTime" type="xs:string"/>
+        <xs:element name="accidentDate" type="xs:string"/>
+        <xs:element name="location" type="xs:string"/>
+        <xs:element name="received" type="xs:string"/>
+        <xs:element name="how" type="xs:string"/>
+        <xs:element name="flowType" type="xs:string"/>
+          <xs:element name="reviewItems">
+            <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+            <xs:element name="itemId" type="xs:string"/>
+            <xs:element name="itemName" type="xs:string"/>
+            <xs:element name="itemValue" type="xs:string"/>
+            <xs:element name="itemRelation" type="xs:string"/>
+            </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>
