@@ -2,8 +2,8 @@
   class FetchData {
 
     public static function Fetch($type){
-    require_once '../conn.php';
-    require_once '../classes/review.php';
+    require_once (__DIR__.'/../conn.php');
+    require_once (__DIR__.'/../classes/review.php');
 
 
     $array = [];
