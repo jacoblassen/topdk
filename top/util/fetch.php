@@ -63,7 +63,7 @@
           //clear old review object and create new one
           $review = new Review(
             $id,
-            $fullname,
+            $fullName,
             $cpr,
             $email,
             $tlf,
