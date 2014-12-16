@@ -1,8 +1,10 @@
 <?php
   require_once 'conn.php';
-  $data = file_get_contents('http://192.168.10.10/fetchJSON.php');
-  $data = json_decode($data);
-  
-  var_dump($data);
-
+  require_once 'jsv4-php/jsv4.php';
+  echo '1';
+  $data = file_get_contents('schemas/testString.json');
+  $schema = file_get_contents('schemas/JSON.json');
+  $validate = Jsv4::isValid(json_decode(json_encode($data)), json_decode(json_encode($schema)));
+  var_dump($validate);
+  //echo $data;
 ?>
