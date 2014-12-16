@@ -1,7 +1,7 @@
 <?php
   class FetchData {
 
-    public static function Fetch(){
+    public static function Fetch($type){
     require_once '../conn.php';
     require_once '../classes/review.php';
 
@@ -25,7 +25,7 @@
       how,
       flowType
     FROM review
-    WHERE livSent IS NULL";
+    WHERE livSent IS NULL AND flowType = ?";
 
     $fetchSelect01 = "
     SELECT
@@ -38,6 +38,7 @@
 
       try{
       $stmt = $mysqli->prepare($fetchSelect);
+      $stmt->bind_param('s', $type);
       $stmt->execute();
       $stmt->store_result();
       $stmt->bind_result($id, $fullName, $cpr, $email, $tlf, $contactTime, $accidentDate, $location, $recieved, $how, $flowType);
