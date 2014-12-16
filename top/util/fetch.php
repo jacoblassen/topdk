@@ -77,12 +77,12 @@
           );
           array_push($array, $review);
         }
-        var_dump($array);
       }
 
       catch(Exception $e){
         echo 'Caught exception: ',  $e->getMessage(), "\n";
       }
+      return $array;
     }
   }
 ?>

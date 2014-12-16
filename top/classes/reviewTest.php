@@ -26,5 +26,6 @@
   //var_dump($review);
   //$name = $review->name;
 
-  FetchData::Fetch('JSON');
+  $data = FetchData::Fetch('JSON');
+  var_dump($data);
 ?>
