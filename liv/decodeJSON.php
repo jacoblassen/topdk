@@ -20,8 +20,10 @@
     $stmt01->bind_param('sssssssss', $_name, $_cpr, $_email, $_tlf, $_tlfTime, $_accidentDate, $_where, $_how, $_flowType);
     $stmt02->bind_param('ssi', $_valueName, $_itemValue, $_relation);
 
-    echo "it's valid";
+    //echo "it's valid";
     //loop though each recieved review
+    $postData = [];
+    $count = 0;
     foreach($data as $review) {
       //set SQL parameters
       $_name = $review->name;
@@ -34,8 +36,11 @@
       $_how = $review->how;
       $_flowType = $review->flowType;
 
+      $postData += ['id'.$count => $review->id];
+      $count++;
+
       //Execute
-      $stmt01->execute();
+      //$stmt01->execute();
 
       //set relation between reviewItem and review
       $_relation = $stmt01->insert_id;
@@ -47,9 +52,10 @@
       foreach($reviewItems as $item) {
         $_valueName = $item->itemName;
         $_itemValue = $item->itemValue;
-        $stmt02->execute();
+        //$stmt02->execute();
       }
     }
+    var_dump($postData);
   }
   else{
     echo 'NOT VALID!';
