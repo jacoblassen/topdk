@@ -1,23 +1,67 @@
 <?xml version="1.0"?>
 
 <root>
-  <review>
-    <id>11</id>
-    <name>as</name>
-    <cpr>11</cpr>
-    <email>a@a.com</email>
-    <tlf>11</tlf>
-    <contactTime>11:00</contactTime>
-    <accidentDate>1999-12-12</accidentDate>
-    <location>as</location>
-    <received>11:00</received>
-    <how>as</how>
-    <flowType>XML</flowType>
-    <reviewItems>
-      <itemId>11</itemId>
-      <itemName>as</itemName>
-      <itemValue>6</itemValue>
-      <itemRelation>11</itemRelation>
-    </reviewItems>
-  </review>
+	<review>
+		<id>11</id>
+		<name>navn</name>
+		<cpr>12345678</cpr>
+		<email>e@mail.dl</email>
+		<tlf>12345678</tlf>
+		<contactTime>nu</contactTime>
+		<accidentDate>2014-10-10 00:00:00</accidentDate>
+		<location>her</location>
+		<received>2014-12-12 11:30:26</received>
+		<how>saadan</how>
+		<flowType>XML</flowType>
+	<reviewItems>
+		<itemId>3</itemId>
+		<itemName>injured</itemName>
+		<itemValue>8</itemValue>
+		<itemRelation>11</itemRelation>
+	</reviewItems>
+	<reviewItems>
+		<itemId>6</itemId>
+		<itemName>hvadsomhelst</itemName>
+		<itemValue>jeg har ondt i hovedet</itemValue>
+		<itemRelation>11</itemRelation>
+	</reviewItems>
+	</review>
+	<review>
+		<id>12</id>
+		<name>j p</name>
+		<cpr>87654321</cpr>
+		<email>ny@mail.dl</email>
+		<tlf>12345d78</tlf>
+		<contactTime>nu</contactTime>
+		<accidentDate>2014-10-10 00:00:00</accidentDate>
+		<location>her</location>
+		<received>2014-12-12 11:36:41</received>
+		<how>saadan</how>
+		<flowType>XML</flowType>
+	<reviewItems>
+		<itemId>4</itemId>
+		<itemName>injured</itemName>
+		<itemValue>3</itemValue>
+		<itemRelation>12</itemRelation>
+		</reviewItems>
+	</review>
+	<review>
+		<id>13</id>
+		<name>igenj p</name>
+		<cpr>87654321</cpr>
+		<email>ny@mail.dl</email>
+		<tlf>12345d78</tlf>
+		<contactTime>nu</contactTime>
+		<accidentDate>2014-10-10 00:00:00</accidentDate>
+		<location>her</location>
+		<received>2014-12-12 11:39:10</received>
+		<how>saadan</how>
+		<flowType>XML</flowType>
+	<reviewItems>
+		<itemId	>5</itemId>
+		<itemName>injured</itemName>
+		<itemValue>1</itemValue>
+		<itemRelation>13</itemRelation>
+	</reviewItems>
+	</review>
 </root>

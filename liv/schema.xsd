@@ -18,7 +18,7 @@
         <xs:element name="received" type="xs:string"/>
         <xs:element name="how" type="xs:string"/>
         <xs:element name="flowType" type="xs:string"/>
-          <xs:element name="reviewItems">
+          <xs:element name="reviewItems" maxOccurs="unbounded"> <!-- reviewItems needed unbounded -->
             <xs:complexType>
             <xs:sequence maxOccurs="unbounded">
             <xs:element name="itemId" type="xs:string"/>

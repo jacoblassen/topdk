@@ -1,7 +1,11 @@
 <?php
+  //$fetchXML = file_get_contents('http://192.168.10.10/fetchXML.php');
+  //$xmlShow = simplexml_load_string($fetchXML);
+  //echo $fetchXML;
+  /*echo '</br>';
+  echo '</br>';*/
 
-  $fetchXML = file_get_contents('http://192.168.10.10/fetchXML.php');
-
+  // Error msg for the validation
   function libxml_display_error($error)
   {
      $return = "<br/>\n";
@@ -28,7 +32,7 @@
   function libxml_display_errors() {
      $errors = libxml_get_errors();
      foreach ($errors as $error) {
-         print libxml_display_error($error);
+         echo libxml_display_error($error);
      }
      libxml_clear_errors();
   }
@@ -36,11 +40,14 @@
   // Enable user error handling
   libxml_use_internal_errors(true);
 
+  //Creates the object
   $xml = new DOMDocument();
-  $xml->load($fetchXML);
+  $xml->load('http://192.168.10.10/fetchXML.php');
+
 
   if (!$xml->schemaValidate('schema.xsd')) {
-     print '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
+     echo '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
      libxml_display_errors();
   }
+  echo '1';
   ?>
