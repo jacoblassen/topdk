@@ -4,6 +4,8 @@
   //echo $fetchXML;
   /*echo '</br>';
   echo '</br>';*/
+  require_once 'conn.php';
+  require_once 'sql.php';
 
   // Error msg for the validation
   function libxml_display_error($error)
@@ -48,5 +50,38 @@
   if (!$xml->schemaValidate('schema.xsd')) {
      echo '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
      libxml_display_errors();
+  }
+  else{
+      $stmt = $mysqli->prepare($query01);
+      $stmt01 = $mysqli->prepare($query02);
+
+      $stmt->bind_param('sssssssss', $_name, $_cpr, $_email, $_tlf, $_contactTime, $_accidentDate, $_where, $_how, $_flowType);
+      $stmt01->bind_param('ssi', $_valueName, $_itemValue, $_relation);
+
+  $xmlSimple = simplexml_load_file('http://192.168.10.10/fetchXML.php');
+    foreach($xmlSimple->review as $review){
+      $_name = $review->name;
+      $_cpr = $review->cpr;
+      $_email = $review->email;
+      $_tlf = $review->tlf;
+      $_contactTime = $review->contactTime;
+      $_accidentDate = $review->accidentDate;
+      $_where = $review->where;
+      $_how = $review->how;
+      $_flowType = $review->flowType;
+      $stmt->execute();
+      $_relation = $stmt->insert_id;
+      $reviewItems = $review->reviewItems;
+      foreach($reviewItems as $item){
+            $_valueName = $item->itemName;
+            $_itemValue = $item->itemValue;
+            $stmt01->execute();
+            echo $_relation;
+            echo '1';
+            echo $item->itemName;
+            echo $item->itemValue;
+            echo '</br>';
+      }
+    }
   }
 ?>
