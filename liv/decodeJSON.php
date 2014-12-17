@@ -36,6 +36,7 @@
       $_how = $review->how;
       $_flowType = $review->flowType;
 
+      //Generates post data to send to http://192.168.10.10/updateLivSent.php
       $postData += ['id'.$count => $review->id];
       $count++;
 
@@ -55,6 +56,7 @@
         $stmt02->execute();
       }
     }
+    
     $url = 'http://192.168.10.10/updateLivSent.php';
 
     // use key 'http' even if you send the request to https://...
