@@ -55,7 +55,20 @@
         //$stmt02->execute();
       }
     }
-    var_dump($postData);
+    $url = 'http://192.168.10.10/updateLivSent.php';
+
+    // use key 'http' even if you send the request to https://...
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($postData),
+        ),
+    );
+    $context  = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+
+    var_dump($result);
   }
   else{
     echo 'NOT VALID!';
