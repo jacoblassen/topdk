@@ -4,76 +4,97 @@
     "description": "An array containing all set of reviews not yet stored in liv database",
     "type": "array",
     "items": {
+
       "title": "Review",
       "type": "object",
+      "required": ["id", "name", "cpr", "email", "tlf", "contactTime", "accidentDate", "location", "received", "how", "flowType"],
       "properties": {
+
         "id": {
-          "description": "unique identifier from toppro database",
+          "description": "Unique identifier from toppro database",
           "type": "number"
         },
+
         "name": {
           "description": "Full name of the person filling the review. First Middle and last name",
           "type": "string"
         },
+
         "cpr": {
           "description": "CPR or customer number for the person filling the review",
           "type": "string"
         },
+
         "email": {
           "description": "Contact email",
           "type": "string"
         },
+
         "tlf": {
           "description": "Contact phone number. Can inlcude space and country code",
           "type": "string"
         },
+
         "contactTime": {
           "description": "When the customer wants to be contacted",
           "type": "string"
         },
+
         "accidentDate": {
           "description": "Date for when the accident happened, will be as a DateTime (YYYY-MM-DD HH:mm:SS) but only date is relevent",
           "type": "string"
         },
+
         "location": {
           "description": "Where did the accident happen. kan be a long string with description",
           "type": "string"
         },
+
         "received": {
           "description": "DateTime (YYYY-MM-DD HH:mm:SS) for when the review got inserted into Topprp database",
           "type": "string"
         },
+
         "how": {
           "description": "Description of how the accident happened",
           "type": "string"
         },
+
         "flowType": {
           "description": "Value that descripes if this review is handles with JSON or XML, for testing purposes",
           "type": "string"
         },
+
         "reviewItems": {
           "description": "Array that holds all the different reviewItems associated with the review",
           "type": "array",
           "items": {
+
             "description": "Associative array that hold data for each reviewItem",
             "type": "object",
+            "required": ["itemId", "itemName", "itemValue", "itemRelation"],
             "properties": {
+
               "itemId": {
-                "description": "unique identifier from toppro database",
+                "description": "Unique identifier from toppro database",
                 "type": "number"
               },
+
               "itemName": {
                 "description": "Name of the revieItem, used to identify what the data is about",
                 "type": "string"
               },
+
               "itemValue": {
                 "description": "Holds the value for the review item",
                 "type": "string"
               },
+
               "itemfail": {
                 "description": "Holds the value for the review item",
                 "type": "string"
               },
+
               "itemRelation": {
                 "description": "Holds the relation to reviewIitem",
                 "type": "number"
