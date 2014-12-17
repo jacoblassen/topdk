@@ -49,5 +49,4 @@
      echo '<b>DOMDocument::schemaValidate() Generated Errors!</b>';
      libxml_display_errors();
   }
-  echo '1';
-  ?>
+?>
