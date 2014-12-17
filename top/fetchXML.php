@@ -21,6 +21,6 @@
     }
   }
 
-  Header('Content-Type: text/xhtml; charset=utf-8');
+  Header('Content-Type: text/xml; charset=utf-8');
   echo($xml->asXML());
 ?>
