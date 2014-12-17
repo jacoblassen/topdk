@@ -40,7 +40,7 @@
       $count++;
 
       //Execute
-      //$stmt01->execute();
+      $stmt01->execute();
 
       //set relation between reviewItem and review
       $_relation = $stmt01->insert_id;
@@ -52,7 +52,7 @@
       foreach($reviewItems as $item) {
         $_valueName = $item->itemName;
         $_itemValue = $item->itemValue;
-        //$stmt02->execute();
+        $stmt02->execute();
       }
     }
     $url = 'http://192.168.10.10/updateLivSent.php';
