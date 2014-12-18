@@ -2,7 +2,6 @@
   require_once 'util/fetch.php';
 
   $data = FetchData::Fetch('XML');
-  //var_dump($data);
   $xml = new simpleXMLElement('<root/>');
   foreach($data as $object){
     $review = $xml->addChild('review');

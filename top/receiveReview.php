@@ -65,7 +65,7 @@
 
       try {
         $stmt = $mysqli->prepare($query02);
-        $stmt->bind_param('ssi', $_valueName, $_itemValue, $_relation);
+        $stmt->bind_param('sii', $_valueName, $_itemValue, $_relation);
         foreach ($reviewItems as $key => $value) {
           $_valueName = $key;
           $_itemValue = $value;
